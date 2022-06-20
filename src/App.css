@@ -292,3 +292,12 @@ button {
   color: #9499C3;
   text-transform: uppercase;
 }
+@media(max-width: 900px){
+  .containerData{
+    display: none;
+  }
+  .fontofdesc{
+    font-size: 35px;
+  }
+
+}

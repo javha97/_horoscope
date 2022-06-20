@@ -13,7 +13,7 @@ function App() {
   const [arrow, setarrow] = useState(false)
   const [obj, setobj] = useState({})
   const [systems, setsystems] = useState(false)
-  const [isloading,setisloading]=useState(false)
+  const [isloading, setisloading] = useState(false)
   const system = () => {
     setsystems(!systems)
   }
@@ -39,12 +39,9 @@ function App() {
       }
     };
     axios.request(options).then(function ({ data }) {
-      console.log(data);
       setobj(data)
       setisloading(true)
-    }).catch(function (error) {
-      console.error(error);
-    });
+    })
 
   }
   const clickarrow = () => {
@@ -84,14 +81,14 @@ function App() {
               <div className='size'>
                 <div className='font'>SIGN</div>
                 <button onClick={clickbtn}>{sign}
-                  <img className='toparrow' src={process.env.PUBLIC_URL + 'toparrow.png'} alt="#"></img>
+                  <img className='toparrow' src='toparrow.png' alt="#"></img>
                 </button>
                 {bool && <Sign clicksign={clicksign} />}
               </div>
               <div className='size'>
                 <div className='font'>DATE</div>
                 <button onClick={datebtn}>{btntext}
-                  <img className='toparrow' src={process.env.PUBLIC_URL + 'toparrow.png'} alt="#"></img>
+                  <img className='toparrow' src='toparrow.png' alt="#"></img>
                 </button>
                 {date && <div className='contofsign'>
                   <div className="fn" onClick={(e) => clickitem(e)}>Today</div>
